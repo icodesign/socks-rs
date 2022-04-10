@@ -1,0 +1,17 @@
+[package]
+name = "socks-rs-client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+socks-rs-common = { path = "../socks-common", version = "0.1" }
+tokio = { version = "1", features = ["io-util", "net"] }
+log = "0.4"
+async-trait = "0.1"
+bytes = "1.0"
+tokio-native-tls = { version = "0.3", optional = true }
+
+[features]
+tls = ["tokio-native-tls", "socks-rs-common/tls"]

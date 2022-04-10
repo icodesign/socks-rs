@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/socks-client",
+    "crates/socks-common",
+    "crates/socks-server",
+]

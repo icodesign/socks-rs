@@ -1,0 +1,16 @@
+[package]
+name = "socks-rs-common"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thiserror = "1.0"
+tokio = { version = "1", features = ["io-util", "net"] }
+bytes = "1.0"
+async-trait = "0.1"
+tokio-native-tls = { version = "0.3", optional = true }
+
+[features]
+tls = ["tokio-native-tls"]
